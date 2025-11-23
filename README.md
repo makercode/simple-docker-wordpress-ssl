@@ -10,7 +10,7 @@ Pasos para linux debian:
 - Instalar con las instrucciones mkcerts e instalar los certificados
   - Crear alias "127.0.0.1 example.com" en /etc/hosts
   - "mkcert -install" en la carpeta base de proyecto
-  - "mkcert example.com" dentro de certs 
+  - "mkcert example.com" dentro de carpeta "/nginx/certs" 
 - Copiar y cambiar variables de entorno en "example.env" a ".env"
 - Agregar en .env la variable HOSTNAME con "example.com"
 - correr docker compose up
