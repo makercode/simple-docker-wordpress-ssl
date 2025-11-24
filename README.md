@@ -6,7 +6,7 @@ Puntos a tener en cuenta:
 - El docker utiliza mkcerts para las llaves autofirmadas. (https://github.com/FiloSottile/mkcert)
 - Se tienen que seguir instrucciones antes de correr el docker
 
-Pasos para linux debian:
+## Pasos para linux debian:
 1. Descargar el zip o "git clone git@github.com:makercode/simple-docker-wordpress-ssl.git"
 2. Instalar con las instrucciones mkcerts e instalar los certificados
   - Crear alias "127.0.0.1 example.com" en /etc/hosts
