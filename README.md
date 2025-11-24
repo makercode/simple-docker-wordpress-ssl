@@ -3,7 +3,7 @@
 Repositorio Original: https://github.com/wazooinc/local-wordpress-development/tree/main
 
 Puntos a tener en cuenta:
-- El docker utiliza mkcerts para las llaves autofirmadas. (https://github.com/FiloSottile/mkcert)
+- El docker utiliza __mkcerts__ para las llaves autofirmadas y hay que instalarlo para usarlo. Instalación y documentación: (https://github.com/FiloSottile/mkcert)
 - Se tienen que seguir instrucciones antes de correr el docker
 
 ## Pasos para linux debian:
@@ -16,5 +16,5 @@ Puntos a tener en cuenta:
     - ssl_certificate /etc/nginx/certs/__example.com__.pem; 
     - ssl_certificate_key /etc/nginx/certs/__example.com__-key.pem;
 3. Copiar y cambiar variables de entorno en "example.env" a ".env"
-4. Agregar en .env la variable HOSTNAME con "example.com"
-5. correr docker compose up
+  - CONTAINER_NAME es solo un prefijo aleatorio para los nombres
+5. correr los contenedores docker con "docker compose up" o "docker compose up -d"
