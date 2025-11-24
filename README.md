@@ -9,9 +9,12 @@ Puntos a tener en cuenta:
 ## Pasos para linux debian:
 1. Descargar el zip o "git clone git@github.com:makercode/simple-docker-wordpress-ssl.git"
 2. Instalar con las instrucciones mkcerts e instalar los certificados
-  - Crear alias "127.0.0.1 example.com" en /etc/hosts
+  - Crear alias "127.0.0.1 __example.com__" en /etc/hosts
   - "mkcert -install" en la carpeta base de proyecto
-  - "mkcert example.com" dentro de carpeta "/nginx/certs" 
+  - "mkcert __example.com__" dentro de carpeta "/nginx/certs"
+  - Asegurarse que en "nginx/default.conf" el alia corresponda para que el shell dentro de docker los copie y use:
+    - ssl_certificate /etc/nginx/certs/__example.com__.pem; 
+    - ssl_certificate_key /etc/nginx/certs/__example.com__-key.pem;
 3. Copiar y cambiar variables de entorno en "example.env" a ".env"
 4. Agregar en .env la variable HOSTNAME con "example.com"
 5. correr docker compose up
